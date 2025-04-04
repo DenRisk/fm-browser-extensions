@@ -4,19 +4,26 @@
   box-sizing: border-box;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
 body,
 html {
-  height: 100%;
   scroll-behavior: smooth;
+  min-height: 100dvh;
+  height: fit-content;
 }
 
 body {
   font-family: DMSans, sans-serif;
+  background: var(--gradient-light);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--color-neutral-900);
+  background-position: center;
+}
+
+html.dark {
+  body {
+    background: var(--gradient-dark);
+  }
 }
 
 ul[role="list"],
@@ -69,16 +76,4 @@ select {
     scroll-behavior: auto !important;
     transition: none;
   }
-}
-
-button {
-  border-radius: 0;
-  text-align: inherit;
-  background: none;
-  box-shadow: none;
-  padding: 0;
-  cursor: pointer;
-  border: none;
-  color: inherit;
-  font: inherit;
 }

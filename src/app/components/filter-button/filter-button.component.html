@@ -1,0 +1,11 @@
+<button
+  (click)="toggleActive()"
+  class="text-3 px-5 py-2 rounded-full cursor-pointer transition duration-300 linear"
+  [ngClass]="
+    active
+      ? 'text-grayscale-0 bg-red-700 hover:bg-red-500 dark:bg-red-500 dark:text-gray-900'
+      : 'bg-grayscale-0 hover:bg-grayscale-100 dark:bg-gray-700 dark:text-grayscale-0 dark:hover:bg-grayscale-600'
+  "
+>
+  <ng-content></ng-content>
+</button>

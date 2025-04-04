@@ -1,0 +1,27 @@
+<div
+  class="bg-grayscale-0 rounded-[20px] p-5 min-h-[200px] flex flex-col gap-5 justify-between h-full dark:bg-grayscale-800 border border-grayscale-200 dark:border-gray-600"
+>
+  <div class="flex gap-4">
+    <div class="w-14 h-14 shrink-0">
+      <img [src]="logoUrl" alt="{{ name }}" />
+    </div>
+    <div>
+      <h2 class="text-2 mb-2 dark:text-grayscale-0">{{ name }}</h2>
+      <p class="text-5 text-grayscale-600 dark:text-grayscale-300">
+        {{ description }}
+      </p>
+    </div>
+  </div>
+
+  <div class="flex items-center justify-between">
+    <app-remove-button
+      [id]="name"
+      (onRemoveExtension)="removeExtension($event)"
+    ></app-remove-button>
+    <app-checkbox
+      [id]="name"
+      [isActive]="isActive"
+      (onToggleCheckbox)="setExenstionActivity($event)"
+    ></app-checkbox>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-grayscale-900: #091540;
+  --color-grayscale-800: #202535;
+  --color-grayscale-700: #2f364b;
+  --color-grayscale-600: #535868;
+  --color-grayscale-300: #c6c6c6;
+  --color-grayscale-200: #d6e2f5;
+  --color-grayscale-100: #eeeeee;
+  --color-grayscale-0: #fbfdfe;
+  --color-red-400: #f25c54;
+  --color-red-500: #de4840;
+  --color-red-700: #c7231a;
+}

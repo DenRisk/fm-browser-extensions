@@ -1,0 +1,11 @@
+<button
+  class="cursor-pointer w-12 h-12 bg-grayscale-100 flex items-center justify-center rounded-xl hover:bg-grayscale-300 transition duration-300 linear dark:bg-grayscale-700 dark:hover:bg-grayscale-600"
+  (click)="toggleTheme()"
+>
+  @if (isDarkMode()) {
+  <app-icon [id]="'sun'"></app-icon>
+
+  } @else {
+  <app-icon [id]="'moon'"></app-icon>
+  }
+</button>

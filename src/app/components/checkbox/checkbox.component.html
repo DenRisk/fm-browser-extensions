@@ -1,0 +1,20 @@
+<label class="relative w-9 h-5 cursor-pointer block">
+  <input
+    type="checkbox"
+    [checked]="isActive"
+    class="hidden"
+    (change)="toggleCheckbox($event)"
+  />
+  <div
+    class="absolute inset-0 bg-grayscale-300 rounded-full transition-all duration-300"
+    [ngClass]="
+      isActive
+        ? 'bg-red-700 hover:bg-red-500 dark:bg-red-400 dark:hover:bg-red-500'
+        : 'bg-grayscale-300 hover:bg-gray-200 dark:bg-grayscale-600 dark:hover:bg-gray-500'
+    "
+  ></div>
+  <div
+    class="absolute left-0.75 top-0.75 w-3.5 h-3.5 bg-grayscale-0 rounded-full transition-transform duration-300"
+    [ngClass]="isActive ? 'translate-x-4' : 'translate-x-0'"
+  ></div>
+</label>

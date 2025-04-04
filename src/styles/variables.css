@@ -1,19 +1,18 @@
-:root  {
-  --neutral-900: #091540
-  --neutral-800: #202535
-  --neutral-700: #2F364B
-  --neutral-600: #535868
-  --neutral-300: #C6C6C6
-  --neutral-200: #D6E2F5
-  --neutral-100: #EEEEEE
-  --neutral-0: #FBFDFE
+:root {
+  --em-color-neutral-900: #091540;
+  --em-color-neutral-800: #202535;
+  --em-color-neutral-700: #2f364b;
+  --em-color-neutral-600: #535868;
+  --em-color-neutral-300: #c6c6c6;
+  --em-color-neutral-200: #d6e2f5;
+  --em-color-neutral-100: #eeeeee;
+  --em-color-neutral-0: #fbfdfe;
+  --em-color-red-400: #f25c54;
+  --em-color-red-500: #de4840;
+  --em-color-red-700: #c7231a;
 
-  --red-400: #F25C54
-  --red-500: #DE4840
-  --red-700: #C7231A
-
-  --gradient-light: linear-gradient(180deg, #EBF2FC 0%, #EEFBF9 100%);
-  --grdient-dark: linear-gradient(180deg, #04091B 0%, #091540 100%);
+  --gradient-light: linear-gradient(180deg, #ebf2fc 0%, #eefbf9 100%);
+  --gradient-dark: linear-gradient(180deg, #04091b 0%, #091540 100%);
 
   --font-size-base: 1rem;
   --font-size-large: 1.25rem;
@@ -24,8 +23,7 @@
   --line-height-140: 1.4;
 
   --font-weight-regular: 400;
+  --font-weight-medium: 500;
   --font-weight-semiBold: 600;
   --font-weight-bold: 700;
 }
-
-

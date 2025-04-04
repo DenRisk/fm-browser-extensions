@@ -1,1 +1,38 @@
-<h1 class="text-3xl underline">Icke Bins</h1>
+<header class="pt-10 layout-container mb-16">
+  <div
+    class="flex items-center justify-between bg-grayscale-0 dark:bg-grayscale-800 rounded-[20px] px-4 py-3 border border-grayscale-200 dark:border-grayscale-600"
+  >
+    <app-icon [id]="isDarkMode() ? 'logoDark' : 'logoLight'"></app-icon>
+    <app-theme-toggle></app-theme-toggle>
+  </div>
+</header>
+
+<main class="pb-16 layout-container">
+  <div
+    class="flex items-center justify-between mb-8 gap-6 flex-col md:flex-row"
+  >
+    <h1 class="text-1 dark:text-grayscale-0">Extensions List</h1>
+    <div class="flex gap-3">
+      @for (filter of filterList(); track filter.type) {
+      <app-filter-button
+        [active]="filter.active"
+        [id]="filter.type"
+        (activeChange)="setActiveFilter($event)"
+      >
+        {{ filter.text }}
+      </app-filter-button>
+      }
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">
+    @for (extension of extensions(); track extension.name) {
+    <app-extension
+      [description]="extension.description"
+      [name]="extension.name"
+      [logoUrl]="extension.logo"
+      [isActive]="extension.isActive"
+    ></app-extension>
+    }
+  </div>
+</main>
